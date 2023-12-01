@@ -56,7 +56,10 @@ class CrimeListFragment : Fragment() {
             dateTextView.text = this.crime.date.toString()
             solvedImageView.visibility = if (crime.isSolved) {
                 View.VISIBLE }
-            else { View.GONE }
+            else {
+                View.GONE
+            }
+
         }
         override fun onClick(v: View) {
             Toast.makeText(context, "${crime.title} pressed !", Toast.LENGTH_SHORT).show()
