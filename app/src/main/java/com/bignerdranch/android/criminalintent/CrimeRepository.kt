@@ -24,7 +24,6 @@ class CrimeRepository private constructor(context: Context) {
 
     fun getCrime(id: UUID): LiveData<Crime?> = crimeDao.getCrime(id)
 
-
     companion object {
         private var INSTANCE: CrimeRepository? = null
 
