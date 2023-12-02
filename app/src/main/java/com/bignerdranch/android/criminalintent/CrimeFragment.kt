@@ -103,6 +103,10 @@ class CrimeFragment : Fragment() {
         solvedCheckBox.apply { setOnCheckedChangeListener { _, isChecked -> crime.isSolved = isChecked } }
 
     }
+    override fun onStop() {
+        super.onStop()
+        crimeDetailViewModel.saveCrime(crime)
+    }
     private fun updateUI() {
         titleField.setText(crime.title)
         dateButton.text = crime.date.toString()
